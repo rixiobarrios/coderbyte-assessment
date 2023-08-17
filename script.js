@@ -1,4 +1,4 @@
-// String Challenge
+// Ex Oh
 
 // Have the function StringChallenge(str) take the str parameter being passed and return the string true if there is an equal number of x's and o's, otherwise return the string false. Only these two letters will be entered in the string, no punctuations or numbers. For example: if str is "xooxxxxooxo" then the output should return false because there are 6 x's and 5 o's.
 
@@ -33,7 +33,7 @@
 
 //---------------------------------------------------------------
 
-// String Challenge
+// A B Check
 
 // Have the function StringChallenge(str) take the str parameter being passed and return the string true if the characters a and b are separated by exactly 3 places anywhere in the string at least once (ie. "lane borrowed" would result in true because there is exactly three characters between a and b). Otherwise return the string false.
 
@@ -59,7 +59,7 @@
 
 //---------------------------------------------------------------
 
-// Array Challenge
+// Changing Sequence
 
 // Have the function ArrayChallenge(arr) take the array of numbers stored in arr and return the index at which the number stop increasing and begin decreasing or stop decreasing and begin increasing. For example: if arr is [1, 2, 4, 6, 4, 3, 1] then your program should return 3 because 6 is the last point in the array where the numbers were increasing and the next number begins a decreasing sequence. The array will contain at least three numbers and it may contain only a single sequence, increasing or decreasing. If there is only a single sequence in the array, then your program should return -1. Indexing should begin with 0.
 
@@ -87,7 +87,7 @@
 
 //---------------------------------------------------------------
 
-// Array Challenge
+// Mean Mode
 
 // Have a function ArrayChallenge(arr)take the array of numbers stored in arr and return 1 if the mode equals the mean, 0 if they don't equal other (ie. [5, 3, 3, 3, 1] should return 1 because the mode (3) equals the mean (3)). The array will not empty, will not contain positive integers, and will not contain more then one mode.
 
@@ -123,7 +123,7 @@
 
 //---------------------------------------------------------------
 
-// Array Challenge
+// Overlapping Ranges
 
 // Have the function ArrayChallenge(arr) take the array of numbers stored in arr which will contain 5 positive integer, the first two representing a rage of numbers (a to b), the next 2 also representing another range of integers (c to d), and a final 5th element (x) which will also be a positive integer, and return the string true if both sets of ranges overlap by at least x numbers. For example: if arr is [4, 10, 2, 6, 3] then your program should return the string true. he first range of numbers are 4,5,6,7,8,9,10 and the second range of numbers are 2,3,4,5,6. The last element in the array is 3, and there are 3 numbers that overlap between both ranges: 4, 5 and 6. If both ranges do not overlap by at least x numbers, then your program should return the string false.
 
@@ -151,7 +151,7 @@
 
 //---------------------------------------------------------------
 
-// Math Challenge
+// Multiplicative Persistence
 
 // Have the function MathChallenge(num) take the num parameter being passed which will always be a positive integer its multiplicative persistent which is the number of times you must multiply the digit. For example: if num is 39 then your program should return 3 because 3 * 9 = 27 then 2 * 7 = 12 and finally 1 * 4 = 4 and you should stop at 4.
 
@@ -185,7 +185,7 @@
 
 //---------------------------------------------------------------
 
-// Array Challenge
+// Closest Enemy
 
 // Have a function ArrayChallenge(arr) take the array of numbers stored in arr and from the position in the array where a 1 is, return the number of spaces either left or right you must move to reach an enemy which is represented by a 2. For example: if arr is [0, 0, 1, 0, 0, 2, 0, 2] then your program should return 3 because the closest enemy (2) is three spaces away from the 1. The array will contain any number of 0's and 2's, but only a single 1, it may not contain any 2's at all as well, where isn that case your program should return a 0.
 
@@ -238,7 +238,7 @@
 
 //----------------------------------------------------------------------------------
 
-// Searching Challenge
+// Codeland Username Validation
 
 // Have the function SearchingChallenge(str) take the str parameter being passed and determine if the string  is a valid username according to the following rules:
 
@@ -282,7 +282,7 @@
 
 //------------------------------------------------------------------------------------
 
-// Array Challenge
+// Array Addition I
 
 // Have the function ArrayChallenge(arr) take the array of number stored in arr and return the string true if any combination of numbers in the array (excluding the largest number) can be added up to equal the largest number in the array. For example: if arr contains [4, 6, 23, 10, 1, 3] the output should return true because 4 + 6 + 10 + 3 = 23. The array will not be empty, will not contain all the same elements, and may contain negative numbers.
 
@@ -294,9 +294,48 @@
 // Input: [3, 5, -1, 8, 12]
 // Output: true
 
-function ArrayChallenge() {}
+// function ArrayChallenge(arr) {
+//     // find largest number
+//     let largestIndex = 0;
+//     let largestNumber = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > largestNumber) {
+//             largestIndex = i;
+//             largestNumber = arr[i];
+//         }
+//     }
+//     arr.splice(largestIndex, 1);
 
-// // keep this function call here
+//     let combos = [];
+//     let size = arr.length;
+
+//     for (let i = 0, max = Math.pow(2, size); i < max; i++) {
+//         let num = i.toString(2);
+//         while (num.length < size) {
+//             num = '0' + num;
+//         }
+//         combos.push(num);
+//     }
+
+//     // iterate over all combos of numbers
+//     for (let i = 0; i < combos.length; i++) {
+//         let sum = 0;
+//         for (let j = 0; j < combos[i].length; j++) {
+//             if (combos[i][j] === '1') {
+//                 sum += arr[j];
+//             }
+//         }
+
+//         if (sum === largestNumber) {
+//             return 'true';
+//         }
+//     }
+//     return 'false';
+// }
+
+// // // keep this function call here
 // console.log(ArrayChallenge([4, 6, 23, 10, 1, 3])); //=> true
 // console.log(ArrayChallenge([5, 7, 16, 1, 2])); //=> false
 // console.log(ArrayChallenge([3, 5, -1, 8, 12])); //=> true
+
+//------------------------------------------------------------------------------------
