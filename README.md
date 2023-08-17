@@ -1,5 +1,7 @@
 ![download-1](https://github.com/rixiobarrios/coderbyte-assessment/assets/55994508/e06f0ec7-b80a-4cbd-a08a-0a1cb798c4ac)
-# coderbyte-assessment
+# Coderbyte Assessment
+
+## Internship: Coding Teaching Assistant (remote)
 
 Are you a Computer Science (or related field) major? Want to learn to build real web apps, instead of just learning theory? Interested in tech education? Want to be involved with a nonprofit that trains Veterans and military spouses to become professional software developers?
 

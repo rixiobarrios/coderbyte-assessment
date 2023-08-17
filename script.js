@@ -171,3 +171,96 @@
 // console.log(MathChallenge(25)); //=> 2
 
 //---------------------------------------------------------------
+
+// Have a function ArrayChallenge(arr) take the array of numbers stored in arr and from the position in the array where a 1 is, return the number of spaces either left or right you must move to reach an enemy which is represented by a 2. For example: if arr is [0, 0, 1, 0, 0, 2, 0, 2] then your program should return 3 because the closest enemy (2) is three spaces away from the 1. The array will contain any number of 0's and 2's, but only a single 1, it may not contain any 2's at all as well, where isn that case your program should return a 0.
+
+// Examples:
+
+// Input: [1, 0, 0, 0, 2, 2, 2]
+// Output: 4
+
+// Input: [2, 0, 0, 0, 2, 2, 1, 0]
+// Output: 1
+
+// helper function to search for enemy from left or from right
+// function makeMoves(array) {
+//     let count = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         count++;
+//         if (array[i] == 2) {
+//             break;
+//         }
+//         if (i == array.length - 1 && array[i] != 2) {
+//             count = 0;
+//         }
+//     }
+//     return count;
+// }
+
+// function ArrayChallenge(arr) {
+//     let onePosition = arr.indexOf(1);
+//     let leftArray = [];
+//     let rightArray = [];
+
+//     for (let i = onePosition - 1; i >= 0; i--) {
+//         leftArray.push(arr[i]);
+//     }
+
+//     for (let i = onePosition + 1; i < arr.length; i++) {
+//         rightArray.push(arr[i]);
+//     }
+
+//     let leftEnemy = makeMoves(leftArray);
+//     let rightEnemy = makeMoves(rightArray);
+
+//     return leftEnemy > rightArray ? leftEnemy : rightEnemy;
+// }
+
+// console.log(ArrayChallenge([0, 0, 1, 0, 0, 2, 0, 2])); //=> 3
+// console.log(ArrayChallenge([1, 0, 0, 0, 2, 2, 2])); //=> 4
+// console.log(ArrayChallenge([2, 0, 0, 0, 2, 2, 1, 0])); //=> 1
+
+//----------------------------------------------------------------------------------
+
+// Searching Challenge
+
+// Have the function SearchingChallenge(str) take the str parameter being passed and determine if the string  is a valid username according to the following rules:
+
+// 1. The username is between 4 and 25 characters.
+// 2. It must start with a letter.
+// 3. It can only contain letters, numbers, and underscore character.
+// 4. It cannot end with an underscore character
+
+// If the username is valid then your program should return the string true, otherwise return the string false.
+
+// Examples:
+
+// Input: "aa_"
+// Output: false
+
+// Input: "u__hello_world123"
+// Output: true
+
+// function SearchingChallenge(str) {
+//     if (str.length <= 4 || str.length >= 25) {
+//         return false;
+//     }
+//     if (!str[0].match(/[a-z]/i)) {
+//         return false;
+//     }
+//     if (str.match('^[a-zA-Z0-9_]-$')) {
+//         return false;
+//     }
+//     if (str.endsWith('_')) {
+//         return false;
+//     } else {
+//         return true;
+//     }
+// }
+
+// console.log(SearchingChallenge('aa_')); //=> false
+// console.log(SearchingChallenge('u__hello_world123')); //=> true
+// console.log(SearchingChallenge('#*_25ad')); //=> false
+// console.log(SearchingChallenge('1234567890qwertyuiopasdfgh')); //=> false
+
+//------------------------------------------------------------------------------------
